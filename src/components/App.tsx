@@ -3,9 +3,13 @@ import Items from "../component-items/Items";
 import Headline from "../component-product/Headline";
 import Category from "../component-category/Category";
 import MoreButton from "../component-button-more/MoreButton";
+import Nav from "./Nav"
+import Footer from "./Footer"
+
 const App = () => {
   return (
     <div className="bg-[#fdf4f4]">
+      <Nav />
       <Index />
       <Headline />
       <div className="flex flex-wrap justify-around">
@@ -68,6 +72,7 @@ const App = () => {
         {/** Category-product that's like spotlight**/}
       </div>
       <MoreButton />
+      <Footer />
     </div>
   );
 };
