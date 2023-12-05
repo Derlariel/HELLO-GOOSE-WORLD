@@ -1,0 +1,16 @@
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo img {
+  width: 100%;
+  height: auto;
+}
+
+#search {
+  border-radius: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+}

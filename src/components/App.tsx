@@ -1,10 +1,12 @@
 import React from 'react'
-import './App.css'
+import './css/App.css'
+import Nav from './Nav'
 
 const App = () => {
   return (
     <>
-      <div className="text-red-500">App</div>
+      <Nav />
+      <div className="text-red-500">Hello World</div>
     </>
   )
 }
