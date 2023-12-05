@@ -1,15 +1,75 @@
-import React from 'react'
-import './css/App.css'
-import Nav from './Nav'
-import Footer from './Footer'
-
+import Index from "../component-spotlight/Spotlight";
+import Items from "../component-items/Items";
+import Headline from "../component-product/Headline";
+import Category from "../component-category/Category";
+import MoreButton from "../component-button-more/MoreButton";
 const App = () => {
   return (
-    <>
-      <Nav />
-      <Footer />
-    </>
-  )
-}
+    <div className="bg-[#fdf4f4]">
+      <Index />
+      <Headline />
+      <div className="flex flex-wrap justify-around">
+        <Items
+          content="Product-Image"
+          name="Name"
+          description="description description description description description description"
+        ></Items>
+        <Items
+          content="Product-Image"
+          name="Name"
+          description="description description description description description description"
+        ></Items>
+        <Items
+          content="Product-Image"
+          name="Name"
+          description="description description description description description description"
+        ></Items>
+      </div>
+      <Category />
+      {/** Category-product that's like spotlight**/}
+      <div>
+        <div className="flex flex-wrap justify-around mt-3">
+          {/** Category-product component-items1 **/}
 
-export default App
+          <Items
+            content="Product-Image"
+            name="Name"
+            description="description description description description description description"
+          ></Items>
+          <Items
+            content="Product-Image"
+            name="Name"
+            description="description description description description description description"
+          ></Items>
+          <Items
+            content="Product-Image"
+            name="Name"
+            description="description description description description description description"
+          ></Items>
+        </div>
+        {/** Category-product component-items2 **/}
+        <div className="flex flex-wrap justify-around mt-3">
+          <Items
+            content="Product-Image"
+            name="Name"
+            description="description description description description description description"
+          ></Items>
+          <Items
+            content="Product-Image"
+            name="Name"
+            description="description description description description description description"
+          ></Items>
+          <Items
+            content="Product-Image"
+            name="Name"
+            description="description description description description description description"
+          ></Items>
+        </div>
+        {/** Category-product that's like spotlight**/}
+      </div>
+      <MoreButton />
+    </div>
+  );
+};
+
+export default App;
