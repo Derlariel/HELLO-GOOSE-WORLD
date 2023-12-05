@@ -6,13 +6,13 @@ import goose_help from '../assets/nav/help.png'
 const Nav = () => {
   return (
     <>
-      <div id='footer' className='flex flex-row justify-center items-stretch pl-8 pr-8 pt-8 pb-8 gap-11'>
-        <div className='grid basis-1/2 rounded-2xl p-2'>
-          <div className='footer-img'>
-            <img src={goose_help} width='100%'/>
+      <div id='footer' className='flex flex-row justify-center items-stretch pl-8 pr-8 pt-8 pb-8 gap-11 mt-11'>
+        <div className='flex flex-row basis-1/2 rounded-2xl p-2'>
+          <div className='flex flex-row-reverse basis-1/2'>
+            <img src={goose_help} width='75%'/>
           </div>
-          <div className='footer-info flex flex-col justify-start items-start'>
-            <p className='text-2xl font-bold mb-2 mt-11'>Help Center</p>
+          <div className='flex flex-col justify-center items-start basis-1/2'>
+            <p className='text-2xl font-bold mb-2'>Help Center</p>
             <ul className='list-disc ml-7' style={{color: '#DD9973'}}>
               <li>How to use</li>
               <li>Report System Problem</li>

@@ -10,7 +10,7 @@ const items = ({ content, name, description }: ItemProps) => {
       {/* items-zone */}
       <div className=" w-52 h-60 flex flex-col justify-center items-center  text-center border  border-b-gray-800 rounded-md">
         <span className=" w-48 h-44 mt-1  bg-[#dc9873]  rounded-t-md flex justify-center items-center ">
-          {content}
+          <img src={content} />
         </span>
         <h1 className="relative right-[4.5em] font-bold">{name}</h1>
         <p className=" text-[10px] whitespace-normal ">{description}</p>

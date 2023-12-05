@@ -6,28 +6,24 @@ import MoreButton from "../component-button-more/MoreButton";
 import Nav from "./Nav"
 import Footer from "./Footer"
 
+import spotLight_Product from "../assets/data/spotlight-product"
+
 const App = () => {
+  const spotList = spotLight_Product.map(Product =>
+      <Items
+          content={Product.image}
+          name={Product.name}
+          description={Product.description}
+        ></Items>
+    ) 
+
   return (
     <div className="bg-[#fdf4f4]">
       <Nav />
       <Index />
       <Headline />
       <div className="flex flex-wrap justify-around">
-        <Items
-          content="Product-Image"
-          name="Name"
-          description="description description description description description description"
-        ></Items>
-        <Items
-          content="Product-Image"
-          name="Name"
-          description="description description description description description description"
-        ></Items>
-        <Items
-          content="Product-Image"
-          name="Name"
-          description="description description description description description description"
-        ></Items>
+        {spotList}
       </div>
       <Category />
       {/** Category-product that's like spotlight**/}
