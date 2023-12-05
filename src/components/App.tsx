@@ -25,7 +25,9 @@ const App = () => {
       <div className="flex flex-wrap justify-around">
         {spotList}
       </div>
-      <Category />
+      <div>
+        <Category categories={["Clothes", "Shoes", "Sports"]} />
+      </div>
       {/** Category-product that's like spotlight**/}
       <div>
         <div className="flex flex-wrap justify-around mt-3">
