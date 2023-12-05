@@ -1,0 +1,23 @@
+#footer {
+    background-color: #94C3AD;
+}
+
+#footer div:first-child {
+    background-color: #FCF5F4;
+}
+
+#footer div:first-child {
+    grid-template: 'photo' 'map' / 1fr 2fr;
+}
+
+#footer .footer-img {
+    grid-area: 'photo';
+}
+
+#footer .footer-info {
+    grid-area: 'map';
+}
+
+iframe {
+    filter: invert(90%);
+}
