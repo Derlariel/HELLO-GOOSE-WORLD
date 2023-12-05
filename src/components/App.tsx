@@ -22,7 +22,7 @@ const App = () => {
       <Nav />
       <Index />
       <Headline />
-      <div className="flex flex-wrap justify-around">
+      <div className="flex flex-nowrap justify-around">
         {spotList}
       </div>
       <div>
