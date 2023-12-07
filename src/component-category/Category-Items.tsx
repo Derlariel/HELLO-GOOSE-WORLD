@@ -4,18 +4,35 @@ import Product from "../assets/data/product";
 interface CategoryItemsProps {
     name: string;
     amount: number;
+    ownerID?: number;
 }
 
-function CategoryItems({ name , amount }: CategoryItemsProps) {
-    const categoryItems = Product.filter((product) => product.productCategory === name)
-    .slice(0, amount)
-    .map((product) => (
-        <Items
-            content={product.image}
-            name={product.name}
-            description={product.description}
-        ></Items>
-    ));
+function CategoryItems({ name , amount , ownerID }: CategoryItemsProps) {
+    let categoryItems = null;
+
+    if (ownerID) {
+        categoryItems = Product.filter((product) => product.productCategory === name)
+        .slice(0, amount)
+        .map((product) => (
+            <Items
+                content={product.image}
+                name={product.name}
+                description={product.description}
+            ></Items>
+        ));
+    }else {
+        categoryItems = Product.filter((product) => product.productCategory === name && product.userId === ownerID)
+        .slice(0, amount)
+        .map((product) => (
+            <Items
+                content={product.image}
+                name={product.name}
+                description={product.description}
+            ></Items>
+        ));
+    }
+    
+    
 
     if (categoryItems.length < amount) {
         const lastItem = categoryItems[categoryItems.length - 1];

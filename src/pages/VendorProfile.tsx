@@ -5,6 +5,7 @@ import SmallBanner from "../component-banner/small-banner.tsx";
 import Category from "../component-category/Category";
 import MoreButton from "../component-button-more/MoreButton";
 import CategoryItems from "../component-category/Category-Items";
+import { useState } from "react";
 
 interface VendorProfileProps {
   userID: number;
@@ -39,6 +40,12 @@ function VendorProfile({ userID }: VendorProfileProps) {
     ></Items>
   ));
 
+  const [selectedCategory, setSelectedCategory] = useState("Clothes");
+
+  const handleCategoryClick = (category: string) => {
+    setSelectedCategory(category);
+  };
+
   return (
     <>
       <VendorBanner userID={userID} />
@@ -50,11 +57,11 @@ function VendorProfile({ userID }: VendorProfileProps) {
       </div>
       <SmallBanner userID={userID} />
       <div className="2xl:ml-[3%] lg:ml-[1%]">
-        <Category categories={["Clothes", "Shoes", "Sports"]} />
+        <Category categories={["Clothes", "Shoes", "Sports"]} onCategoryClick= {handleCategoryClick} />
       </div>
       {/** Category-product that's like spotlight**/}
       <div>
-        <CategoryItems name="Clothes" amount={3} />
+        <CategoryItems name={selectedCategory} amount={3}  ownerID={userID} />
       </div>
       <MoreButton />
     </>
