@@ -4,9 +4,10 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 interface CategoryProps {
   categories: string[];
+  onCategoryClick: (category: string) => void;
 }
 
-const Category = ({ categories }: CategoryProps) => {
+const Category = ({ categories , onCategoryClick }: CategoryProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -38,9 +39,13 @@ const Category = ({ categories }: CategoryProps) => {
             <div className=" rounded-md bg-[#95c3ac] flex flex-col w-32 absolute left-12">
               <div className="dropdown-content text-center flex flex-col justify-center text-xs text-gray-600">
                 {categories.map((category, index) => (
-                  <a key={index} href="#" className="hover:bg-blue-300">
+                  <button
+                    key={index}
+                    className="hover:bg-blue-300"
+                    onClick={() => onCategoryClick(category)}
+                  >
                     {category}
-                  </a>
+                  </button>
                 ))}
               </div>
             </div>

@@ -4,6 +4,7 @@ import Items from "../component-items/Items";
 import SmallBanner from "../component-banner/small-banner.tsx";
 import Category from "../component-category/Category";
 import MoreButton from "../component-button-more/MoreButton";
+import CategoryItems from "../component-category/Category-Items";
 
 interface VendorProfileProps {
   userID: number;
@@ -53,25 +54,7 @@ function VendorProfile({ userID }: VendorProfileProps) {
       </div>
       {/** Category-product that's like spotlight**/}
       <div>
-        <div className="flex  flex-nowrap  justify-around mt-3">
-          {/** Category-product component-items1 **/}
-
-          <Items
-            content="Product-Image"
-            name="Name"
-            description="description description description description description description"
-          ></Items>
-          <Items
-            content="Product-Image"
-            name="Name"
-            description="description description description description description description"
-          ></Items>
-          <Items
-            content="Product-Image"
-            name="Name"
-            description="description description description description description description"
-          ></Items>
-        </div>
+        <CategoryItems name="Clothes" amount={3} />
       </div>
       <MoreButton />
     </>

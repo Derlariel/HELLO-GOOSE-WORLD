@@ -4,6 +4,8 @@ import Headline from "../component-product/Headline";
 import Category from "../component-category/Category";
 import MoreButton from "../component-button-more/MoreButton";
 import spotLight_Product from "../assets/data/spotlight-product";
+import CategoryItems from "../component-category/Category-Items";
+import { useState } from "react";
 
 function Home() {
   const spotList = spotLight_Product.map((Product) => (
@@ -13,54 +15,25 @@ function Home() {
       description={Product.description}
     ></Items>
   ));
+
+  const [selectedCategory, setSelectedCategory] = useState("Clothes");
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+
   return (
     <div>
       <Index />
       <Headline />
       <div className="flex flex-nowrap justify-around">{spotList}</div>
       <div className="">
-        <Category categories={["Clothes", "Shoes", "Sports"]} />
+        <Category categories={["Clothes", "Shoes", "Sports"]} onCategoryClick={handleCategoryClick} />
       </div>
       {/** Category-product that's like spotlight**/}
       <div>
-        <div className="flex  flex-nowrap  justify-around mt-3">
-          {/** Category-product component-items1 **/}
-
-          <Items
-            content="Product-Image"
-            name="Name"
-            description="description description description description description description"
-          ></Items>
-          <Items
-            content="Product-Image"
-            name="Name"
-            description="description description description description description description"
-          ></Items>
-          <Items
-            content="Product-Image"
-            name="Name"
-            description="description description description description description description"
-          ></Items>
-        </div>
+        <CategoryItems name={selectedCategory} amount={6} />
         {/** Category-product component-items2 **/}
-        <div className="flex flex-nowrap justify-around mt-3">
-          <Items
-            content="Product-Image"
-            name="Name"
-            description="description description description description description description"
-          ></Items>
-          <Items
-            content="Product-Image"
-            name="Name"
-            description="description description description description description description"
-          ></Items>
-          <Items
-            content="Product-Image"
-            name="Name"
-            description="description description description description description description"
-          ></Items>
-        </div>
-        {/** Category-product that's like spotlight**/}
       </div>
       <MoreButton />
     </div>
