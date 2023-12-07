@@ -18,7 +18,7 @@ function Home() {
 
   const [selectedCategory, setSelectedCategory] = useState("Clothes");
 
-  const handleCategoryClick = (category) => {
+  const handleCategoryClick = (category: string) => {
     setSelectedCategory(category);
   };
 
