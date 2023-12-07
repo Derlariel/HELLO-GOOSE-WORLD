@@ -92,7 +92,7 @@ function product() {
                     className="text-md text-green-500 relative left-[6.5em] bottom-2"
                   />
                   <div
-                    className={`border-2 border-black w-24 h-10 rounded-2xl flex bg-[#dd9973] ${buttonColor} ${buttonPosition}`}
+                    className={`border-2 border-black w-24 h-10 rounded-2xl flex ${buttonColor} ${buttonPosition}`}
                   >
                     <button
                       onClick={handleClick}
