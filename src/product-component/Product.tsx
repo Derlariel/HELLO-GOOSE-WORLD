@@ -58,7 +58,9 @@ function product() {
               <br />
               {/** button left! **/}
               <div>
-                <h1 className="text-2xl text-[#dd9973] font-bold">quantity</h1>
+                <h1 className="text-2xl text-[#dd9973] font-bold mb-2">
+                  quantity
+                </h1>
                 <div className="flex">
                   <button
                     type="button"
@@ -67,7 +69,7 @@ function product() {
                   >
                     <FontAwesomeIcon icon={faPlus} />
                   </button>
-                  <h1 className="border border-gray-600 w-44  text-center flex items-center justify-center">
+                  <h1 className="border border-gray-600 w-44  text-center flex items-center justify-center text-green-600 text-xl">
                     {quantity}
                   </h1>
                   <button
