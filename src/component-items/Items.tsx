@@ -28,7 +28,7 @@ const items = ({ content, name, description }: ItemProps) => {
             className="bg-[#95c3ac] rounded-2xl pl-4 pr-4 pb-2 pt-2 border border-black flex justify-center"
           >
             <span className="text-black text-[12px] text-center">
-              <Link to="/about">Purchase</Link>
+              <Link to="/src/product-conponent/Product.tsx">Purchase</Link>
             </span>
           </button>
         </div>
