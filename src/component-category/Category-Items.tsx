@@ -10,7 +10,7 @@ interface CategoryItemsProps {
 function CategoryItems({ name , amount , ownerID }: CategoryItemsProps) {
     let categoryItems = null;
 
-    if (ownerID) {
+    if (!ownerID) {
         categoryItems = Product.filter((product) => product.productCategory === name)
         .slice(0, amount)
         .map((product) => (
