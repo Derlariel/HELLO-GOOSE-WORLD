@@ -119,27 +119,29 @@ function product() {
             </div>
           </div>
           {/** Button green! */}
-          <div>
-            <div className="relative top-10">
+          <div className="flex mb-10 mt-10">
+            <div className="w-96">
               <button
                 type="submit"
-                className="bg-[#95c3ac] rounded-2xl w-6/12 p-5 border border-black flex justify-center"
+                className="bg-[#95c3ac] w-[32em] rounded-2xl p-5 border border-black flex justify-center"
               >
                 <span className="text-black text-3xl text-center">
                   Purchase
                 </span>
               </button>
             </div>
-            <div className="relative bottom-8 left-[33em] align-middle">
-              <button
-                className="border border-black p-4 rounded-full"
-                onClick={handleHeart}
-              >
-                <FontAwesomeIcon
-                  icon={faHeart}
-                  className={`text-3xl text-gray-500 ${buttonHeart}`}
-                />
-              </button>
+            <div className="flex">
+              <div className="absolute left-[34em]">
+                <button
+                  className="border border-black p-5 rounded-full"
+                  onClick={handleHeart}
+                >
+                  <FontAwesomeIcon
+                    icon={faHeart}
+                    className={`text-4xl text-gray-500 ${buttonHeart}`}
+                  />
+                </button>
+              </div>
             </div>
           </div>
           {/** Reviews!! */}
