@@ -24,7 +24,7 @@ const Category = ({ categories }: CategoryProps) => {
               <button onClick={toggleDropdown}>
                 <FontAwesomeIcon
                   icon={faChevronUp}
-                  className={`mr-2 ${isOpen ? "rotate-180" : ""}`}
+                  className={`mr-2  text-white ${isOpen ? "rotate-180" : ""} `}
                 />
               </button>
             </div>
@@ -38,7 +38,7 @@ const Category = ({ categories }: CategoryProps) => {
             <div className=" rounded-md bg-[#95c3ac] flex flex-col w-32 absolute left-12">
               <div className="dropdown-content text-center flex flex-col justify-center text-xs text-gray-600">
                 {categories.map((category, index) => (
-                  <a key={index} href="#">
+                  <a key={index} href="#" className="hover:bg-blue-300">
                     {category}
                   </a>
                 ))}
