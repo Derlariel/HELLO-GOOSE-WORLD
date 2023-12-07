@@ -12,7 +12,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons/faStar";
 function product() {
   const [buttonHeart, setButtonHeartColor] = useState("text-gray-500");
   const [buttonPosition, setButtonPosition] = useState("justify-start");
-  const [buttonColor, setButtonColor] = useState("bg-[#dd9973]");
+  const [buttonColor, setButtonColor] = useState("bg-[#d9d9d9]");
   const [rating, setRating] = useState(0);
   const [quantity, setQuantity] = useState(0);
   const handlePlusClick = () => {
@@ -29,7 +29,7 @@ function product() {
       prevState === "justify-start" ? "justify-end" : "justify-start"
     );
     setButtonColor((prevState) =>
-      prevState === "bg-[#dd9973]" ? "bg-[#d9d9d9]" : "bg-[#dd9973]"
+      prevState === "bg-[#d9d9d9]" ? "bg-[#dd9973]" : "bg-[#d9d9d9]"
     );
   };
   const handleHeart = () => {
