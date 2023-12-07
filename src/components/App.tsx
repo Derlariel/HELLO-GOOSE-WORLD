@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import { Routes, Route } from "react-router-dom";
 import Home from "../components/Home";
 import Product from "../product-component/Product";
+import UploadItem from "../pages/UploadItem";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="/product" element={<Product />} />
         <Route path="/" element={<Home />} />
         <Route path="/src/components/Home.tsx" element={<Home />} />
+        <Route path="/uploadItem" element={<UploadItem userID={1} />} />
         <Route
           path="/src/product-conponent/Product.tsx"
           element={<Product />}

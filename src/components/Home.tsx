@@ -28,7 +28,7 @@ function Home() {
       <Headline />
       <div className="flex flex-nowrap justify-around">{spotList}</div>
       <div className="">
-        <Category categories={["Clothes", "Shoes", "Sports"]} onCategoryClick={handleCategoryClick} />
+        <Category onCategoryClick={handleCategoryClick} />
       </div>
       {/** Category-product that's like spotlight**/}
       <div>

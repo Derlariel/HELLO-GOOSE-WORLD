@@ -57,7 +57,7 @@ function VendorProfile({ userID }: VendorProfileProps) {
       </div>
       <SmallBanner userID={userID} />
       <div className="2xl:ml-[3%] lg:ml-[1%]">
-        <Category categories={["Clothes", "Shoes", "Sports"]} onCategoryClick= {handleCategoryClick} />
+        <Category onCategoryClick= {handleCategoryClick} />
       </div>
       {/** Category-product that's like spotlight**/}
       <div>

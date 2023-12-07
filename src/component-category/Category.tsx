@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import categoryData from '../assets/data/category';
 
 interface CategoryProps {
-  categories: string[];
   onCategoryClick: (category: string) => void;
 }
 
-const Category = ({ categories , onCategoryClick }: CategoryProps) => {
+const Category = ({ onCategoryClick }: CategoryProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -38,13 +38,13 @@ const Category = ({ categories , onCategoryClick }: CategoryProps) => {
           <div className="relative">
             <div className=" rounded-md bg-[#95c3ac] flex flex-col w-32 absolute left-12">
               <div className="dropdown-content text-center flex flex-col justify-center text-xs text-gray-600">
-                {categories.map((category, index) => (
+                {categoryData.map((category, index) => (
                   <button
                     key={index}
                     className="hover:bg-blue-300"
-                    onClick={() => onCategoryClick(category)}
+                    onClick={() => onCategoryClick(category.name)}
                   >
-                    {category}
+                    {category.name}
                   </button>
                 ))}
               </div>
