@@ -2,6 +2,7 @@ import "./css/Nav.css";
 import kmutt_logo from "../assets/nav/ant_kmutt.png";
 import profile_logo from "../assets/nav/profile.png";
 import { Link } from "react-router-dom";
+
 const Nav = () => {
   return (
     <>
@@ -30,7 +31,7 @@ const Nav = () => {
               <i className="bi bi-heart" style={{ fontSize: "1.5em" }}></i>
             </div>
             <div className="btn flex flex-row justify-center items-center rounded-full w-14">
-              <img src={profile_logo} />
+              <img src={profile_logo} alt="Profile" />
             </div>
           </div>
         </div>
