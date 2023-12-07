@@ -2,7 +2,7 @@ import Nav from "./Nav";
 import Footer from "./Footer";
 import { Routes, Route } from "react-router-dom";
 import Home from "../components/Home";
-import Product from "../product-component/Product";
+import Product from "../pages/Product";
 import UploadItem from "../pages/UploadItem";
 
 const App = () => {
