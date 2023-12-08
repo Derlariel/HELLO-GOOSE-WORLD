@@ -49,9 +49,9 @@ function CategoryItems({ name , amount , ownerID }: CategoryItemsProps) {
     }
 
     return (
-        <div className="flex flex-col mt-3">
+        <div className="flex flex-col">
             {groupedCategoryItems.map((group, index) => (
-                <div key={index} className="flex justify-around">
+                <div key={index} className="flex justify-around mt-10">
                     {group}
                 </div>
             ))}

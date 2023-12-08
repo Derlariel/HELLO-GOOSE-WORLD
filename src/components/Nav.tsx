@@ -1,6 +1,7 @@
 import "./css/Nav.css";
 import kmutt_logo from "../assets/nav/ant_kmutt.png";
 import profile_logo from "../assets/nav/profile.png";
+import orange from "/assets/orange.png";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
@@ -24,6 +25,12 @@ const Nav = () => {
             <i className="bi bi-search"></i>
           </div>
           <div className="flex flex-row gap-5 justify-center items-center">
+            <div className="btn flex flex-row justify-center items-center rounded-2xl w-[4em] pl-[2%] pr-[4%]">
+              <div className="w-10">
+                <img className="h-full w-full" src={orange} alt="orange" />
+              </div>
+              <p>0</p>
+            </div>
             <div className="btn flex flex-row justify-center items-center rounded-full w-9">
               <Link to={{ pathname: "/uploadItem"}}>
                 <i className="bi bi-cart2" style={{ fontSize: "1.5em" }}></i>

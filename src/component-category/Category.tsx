@@ -16,12 +16,12 @@ const Category = ({ onCategoryClick }: CategoryProps) => {
 
   return (
     <>
-      <div className="mt-5 mr-6 ml-6">
+      <div className="m-7">
         {/* category-zone header! */}
         <div className="flex justify-between items-center relative">
           <div className="flex justify-between">
             <div className="flex justify-between items-center bg-[#dc9873] w-44 h-10 text-md md:w-44 md:relative md:left-[17em] md:z-20 lg:left-0 xl:left-0">
-              <h1 className=" text-white ml-2">Category</h1>
+              <h1 className=" text-white text-2xl ml-2">Category</h1>
               <button onClick={toggleDropdown}>
                 <FontAwesomeIcon
                   icon={faChevronUp}
@@ -37,7 +37,7 @@ const Category = ({ onCategoryClick }: CategoryProps) => {
         {isOpen && (
           <div className="relative">
             <div className=" rounded-md bg-[#95c3ac] flex flex-col w-32 absolute left-12">
-              <div className="dropdown-content text-center flex flex-col justify-center text-xs text-gray-600">
+              <div className="dropdown-content text-center flex flex-col justify-center text-xl text-gray-600">
                 {categoryData.map((category, index) => (
                   <button
                     key={index}

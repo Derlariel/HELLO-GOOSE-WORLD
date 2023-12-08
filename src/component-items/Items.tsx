@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import './items.css';
 interface ItemProps {
   id: number;
   content: string;
@@ -10,9 +11,9 @@ const items = ({ id, content, name, description }: ItemProps) => {
   return (
     <>
       {/* items-zone */}
-      <div className="flex flex-col justify-center items-center text-center border border-b-gray-800 rounded-md">
+      <div className="itemDiv flex flex-col justify-center items-center text-center border border-b-gray-800 rounded-md ">
         <span
-          className=" bg-contain bg-no-repeat bg-center w-44 md:w-[28em] lg:w-[18em] sm:w-48 xl:w-[25em] 2xl:w-[28em] h-52 m-3 bg-[#dc9873] rounded-t-md flex justify-center items-center"
+          className="bg-cover bg-no-repeat bg-center w-44 md:w-[28em] lg:w-[18em] sm:w-48 xl:w-[25em] 2xl:w-[28em] h-52 m-3 bg-[#dc9873] rounded-t-md flex justify-center items-center"
           style={{ backgroundImage: `url(${content})` }}
         ></span>
         <h1 className="relative right-[4.5em] sm:right-[4.5em] md:right-[0] font-bold">
