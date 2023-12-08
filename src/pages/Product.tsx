@@ -21,7 +21,7 @@ function product() {
   const handleMinusClick = () => {
     setQuantity((prevQuantity) => (prevQuantity > 0 ? prevQuantity - 1 : 0));
   };
-  const handleStarClick = (starNumber) => {
+  const handleStarClick = (starNumber: number) => {
     setRating(starNumber);
   };
   const handleClick = () => {
