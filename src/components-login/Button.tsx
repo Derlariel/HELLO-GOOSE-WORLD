@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Button = (props: any) => {
     const {text} = props
     return (

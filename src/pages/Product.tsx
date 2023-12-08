@@ -49,7 +49,7 @@ function product() {
       <div className="flex bg-[#fcf5f4]">
         <div className="flex justify-self-start border-2 border-b-gray-800 rounded-md w-[40em] h-[30em] m-10">
           <div className="flex justify-center items-center ">
-            <img src={product?.image} alt="" className="" />
+            <img src={product?.image} alt="" className="w-full h-full" />
           </div>
         </div>
         <div className="flex flex-col relative top-10">
@@ -164,7 +164,7 @@ function product() {
                       <h1>Mr.Goose</h1>
                     </div>
                     <div>
-                      {[...Array(5)].map((star, index) => {
+                      {[...Array(5)].map((index) => {
                         const starNumber = index + 1;
                         return (
                           <button

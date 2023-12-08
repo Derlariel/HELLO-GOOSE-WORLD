@@ -1,4 +1,3 @@
-import React from 'react'
 import './css/Footer.css'
 
 import goose_help from '../assets/nav/help.png'

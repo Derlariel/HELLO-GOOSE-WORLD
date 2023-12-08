@@ -1,4 +1,3 @@
-import React from 'react'
 import ForInput from '../components-login/forInput'
 import Button from '../components-login/Button'
 
