@@ -17,12 +17,8 @@ const App = () => {
         <Route path="/product" element={<Product />} />
         <Route path="/" element={<Home />} />
         <Route path="/uploadItem" element={<UploadItem/>} />
-        <Route
-          path="/src/product-conponent/Product.tsx"
-          element={<Product />}
-        />
         <Route path="/chat" element={<Chat />} />
-        <Route path="/vendorprofile" element={<VendorProfile userID={2} />} />
+        <Route path="/vendorprofile" element={<VendorProfile />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>

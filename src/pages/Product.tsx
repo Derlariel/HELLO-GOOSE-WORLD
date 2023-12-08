@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useLocation } from 'react-router-dom';
+import { Link,useLocation } from 'react-router-dom';
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,6 +10,7 @@ import {
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
 import Product from "../assets/data/product.ts";
+import vendorData from '../assets/data/vendorData.ts';
 
 
 import { faStar } from "@fortawesome/free-solid-svg-icons/faStar";
@@ -22,6 +23,9 @@ function product() {
   const [buttonColor, setButtonColor] = useState("bg-[#d9d9d9]");
   const [rating, setRating] = useState(0);
   const [quantity, setQuantity] = useState(0);
+
+  const vender = vendorData.find((vendor) => vendor.userId === product?.userId);
+
   const handlePlusClick = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
   };
@@ -53,12 +57,19 @@ function product() {
           </div>
         </div>
         <div className="flex flex-col relative top-10">
-          <h1 className="text-5xl">{product?.name}</h1>
+          <div className='flex flex-row justify-between items-end pr-6'>
+            <h1 className="text-5xl">{product?.name}</h1>
+            <Link to={{
+                pathname: "/vendorprofile",
+              }} state={{ userId: vender?.userId }}>
+                <h3 className="text-xl text-[#95c3ac]">{vender?.name}</h3>
+            </Link>
+          </div>
           <div className="flex flex-wrap">
-            <span className="  text-gray-400 w-[95%]">
+            <span className="mt-2 text-gray-400 w-[95%]">
               <h1 className=" whitespace-wraop">{product?.description}</h1>
             </span>
-            <div className="flex ">
+            <div className="flex mt-1">
               <br />
               {/** button left! **/}
               <div>
@@ -68,17 +79,17 @@ function product() {
                 <div className="flex">
                   <button
                     type="button"
-                    className="border border-gray-600 rounded-l-md p-1 w-20 h-12"
+                    className="border border-gray-600 rounded-l-md p-1 xl:w-20 h-12"
                     onClick={handlePlusClick}
                   >
                     <FontAwesomeIcon icon={faPlus} />
                   </button>
-                  <h1 className="border border-gray-600 w-44  text-center flex items-center justify-center text-green-600 text-xl">
+                  <h1 className="border border-gray-600 xl:w-44 sm:w-16  text-center flex items-center justify-center text-green-600 text-xl">
                     {quantity}
                   </h1>
                   <button
                     type="button"
-                    className="border border-gray-600 rounded-r-md p-1 w-20"
+                    className="border border-gray-600 rounded-r-md p-1 xl:w-20"
                     onClick={handleMinusClick}
                   >
                     <FontAwesomeIcon icon={faMinus} />
@@ -93,7 +104,7 @@ function product() {
                 <div className="flex relative top-2 ">
                   <FontAwesomeIcon
                     icon={faLeaf}
-                    className="text-md text-green-500 relative left-[6.5em] bottom-2"
+                    className="text-md text-green-500 relative left-[6.5em] lg:left-[5.3em] bottom-2"
                   />
                   <div
                     className={`border-2 border-black w-24 h-10 rounded-2xl flex ${buttonColor} ${buttonPosition}`}
@@ -109,7 +120,7 @@ function product() {
                     </button>
                   </div>
                   {/** message right! **/}
-                  <div className=" float-right clear-both inline-block relative left-6">
+                  <div className=" float-right clear-both inline-block relative left-4">
                     <h1 className="text-xs text-gray-400 opacity-50">
                       **If you won’t get the plastic bag or <br /> choose
                       “self-pick up”, you will get “Nature Coin”.
@@ -123,11 +134,11 @@ function product() {
             </div>
           </div>
           {/** Button green! */}
-          <div className="flex mb-10 mt-10">
-            <div className="w-96">
+          <div className="flex mb-10 mt-10 gap-[5%]">
+            <div className="w-96 sm:w-80">
               <button
                 type="submit"
-                className="bg-[#95c3ac] w-[32em] rounded-2xl p-5 border border-black flex justify-center"
+                className="bg-[#95c3ac] w-96 sm:w-80 rounded-2xl p-5 border border-black flex justify-center"
               >
                 <span className="text-black text-3xl text-center">
                   Purchase
@@ -135,21 +146,21 @@ function product() {
               </button>
             </div>
             <div className="flex">
-              <div className="absolute left-[34em]">
+              <div className="">
                 <button
                   className="border border-black p-5 rounded-full"
                   onClick={handleHeart}
                 >
                   <FontAwesomeIcon
                     icon={faHeart}
-                    className={`text-4xl text-gray-500 ${buttonHeart}`}
+                    className={`text-4xl sm:text-2xl text-gray-500 ${buttonHeart}`}
                   />
                 </button>
               </div>
             </div>
           </div>
           {/** Reviews!! */}
-          <div className="bg-white w-10/12 h-1/4 ">
+          <div className="bg-white w-[90%] h-1/4 ">
             <h1 className=" uppercase text-2xl text-[#dd9973] m-3">Reviews</h1>
             <div>
               <div className="flex">
@@ -164,7 +175,7 @@ function product() {
                       <h1>Mr.Goose</h1>
                     </div>
                     <div>
-                      {[...Array(5)].map((index) => {
+                      {[...Array(5)].map((_, index) => {
                         const starNumber = index + 1;
                         return (
                           <button
@@ -186,7 +197,7 @@ function product() {
                   </div>
                   <div>
                     <h1 className="text-gray-500 opacity50">
-                      descriptiondescriptiondescriptiondescriptiondescription
+                      descriptiondescriptiondescriptiondescription
                     </h1>
                   </div>
                 </div>

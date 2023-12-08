@@ -31,7 +31,7 @@ const Nav = () => {
               <i className="bi bi-heart" style={{ fontSize: "1.5em" }}></i>
             </div>
             <div className="btn flex flex-row justify-center items-center rounded-full w-14">
-              <Link to={"/vendorprofile"}>
+              <Link to={"/login"}>
                 <img src={profile_logo} alt="Profile" />
               </Link>
             </div>

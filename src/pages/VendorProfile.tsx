@@ -6,10 +6,7 @@ import Category from "../component-category/Category";
 import MoreButton from "../component-button-more/MoreButton";
 import CategoryItems from "../component-category/Category-Items";
 import { useState } from "react";
-
-interface VendorProfileProps {
-  userID: number;
-}
+import { useLocation } from "react-router-dom";
 
 function getPopluarProduct(userID: number) {
   //Get all products from the vendor
@@ -29,7 +26,8 @@ function getPopluarProduct(userID: number) {
   return topProducts;
 }
 
-function VendorProfile({ userID }: VendorProfileProps) {
+function VendorProfile() {
+  const userID = useLocation().state?.userId;
   const topProducts = getPopluarProduct(userID);
 
   const popular_product = topProducts.map((product) => (
