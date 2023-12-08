@@ -5,6 +5,7 @@ import Home from "../components/Home";
 import Product from "../pages/Product";
 import UploadItem from "../pages/UploadItem";
 import Chat from "../pages/Chat";
+import VendorProfile from "../pages/VendorProfile";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           element={<Product />}
         />
         <Route path="/chat" element={<Chat />} />
+        <Route path="/vendorprofile" element={<VendorProfile userID={2} />} />
       </Routes>
 
       <Footer />
