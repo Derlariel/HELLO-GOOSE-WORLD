@@ -2,11 +2,7 @@ import categoryData from '../assets/data/category';
 import React, { useRef , useState } from 'react';
 import products , { addProduct } from '../assets/data/product';
 
-interface UploadItemProps {
-  userID: number;
-}
-
-function UploadItem({ userID }: UploadItemProps) {
+function UploadItem() {
 
   const [modalVisible, setModalVisible] = useState(false);
   const [modalVisible2, setModalVisible2] = useState(false);

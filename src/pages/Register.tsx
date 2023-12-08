@@ -1,12 +1,6 @@
 import React from 'react'
-import './css/App.css'
-import Nav from './Nav'
-import ForInput from './forInput'
-import Button from './Button'
-import Login from './Button'
-import Connect from './Connect'
-import RegButton from './RegisterButton'
-
+import ForInput from '../components-login/forInput'
+import Button from '../components-login/Button'
 
 const RegsiterPage = () => {
   return (
@@ -14,7 +8,7 @@ const RegsiterPage = () => {
    
       <div className="bg-[#fcf5f4] w-full pt-16">
          {/* Register Texthead */}
-        <div><h1 className="text-center text-6xl font-bold italic">REGINTER</h1></div>
+        <div><h1 className="text-center text-6xl font-bold italic">REGISTER</h1></div>
 
         <div className="flex  w-full py-14 gap-0  ">
         <div className="w-2/4 flex flex-col items-center  border-r-1 border-black gap-y-10  ">
@@ -60,7 +54,6 @@ const RegsiterPage = () => {
             <Button text="Submit"/>
           </div>
       </div>
-      <div className="w-full  h-40 bg-[#94c3ad]"></div>
 
 
     </>

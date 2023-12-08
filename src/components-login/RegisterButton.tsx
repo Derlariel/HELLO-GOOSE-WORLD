@@ -1,6 +1,10 @@
 import React from 'react'
 
-const RegButton = (props: any) => {
+interface RegProps {
+    text: string;
+}
+
+const RegButton = (props: RegProps) => {
     const {text} = props
     return (
         <>

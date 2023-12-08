@@ -6,6 +6,8 @@ import Product from "../pages/Product";
 import UploadItem from "../pages/UploadItem";
 import Chat from "../pages/Chat";
 import VendorProfile from "../pages/VendorProfile";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 const App = () => {
   return (
@@ -14,13 +16,15 @@ const App = () => {
       <Routes>
         <Route path="/product" element={<Product />} />
         <Route path="/" element={<Home />} />
-        <Route path="/uploadItem" element={<UploadItem userID={1} />} />
+        <Route path="/uploadItem" element={<UploadItem/>} />
         <Route
           path="/src/product-conponent/Product.tsx"
           element={<Product />}
         />
         <Route path="/chat" element={<Chat />} />
         <Route path="/vendorprofile" element={<VendorProfile userID={2} />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
 
       <Footer />

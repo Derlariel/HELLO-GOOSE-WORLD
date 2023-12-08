@@ -1,7 +1,11 @@
 import React from 'react'
 
+interface ConnectProps {
+  Link: string;
+  ConnectWith: string;
+}
 
-const Connect = (props: any) => {
+const Connect = (props: ConnectProps) => {
     const {Link,ConnectWith} = props;
     return (
    <>
@@ -9,11 +13,6 @@ const Connect = (props: any) => {
       
     <div className="pl-3"><img className="w-8 " src={Link} alt="" /></div>
     <div><a>Connect With {ConnectWith}</a></div>
-    
-      
-    
-    
-    
     </button>
     
    
