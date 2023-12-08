@@ -4,6 +4,8 @@ import Button from '../components-login/Button'
 import Connect from '../components-login/Connect'
 import RegButton from '../components-login/RegisterButton'
 
+import '../components/css/login.css'
+
 const Login: React.FC = () => {
   return (
 <>

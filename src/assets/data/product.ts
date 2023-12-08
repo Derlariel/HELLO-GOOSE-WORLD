@@ -14,7 +14,7 @@ const products: Product[] = [
         id: 1,
         userId: 1,
         name: "Product 1",
-        image: "/assets/product-img/product.png",
+        image: "https://sundayafternoons.com/cdn/shop/products/caribbean-hat_lifestyle_woman_600x@2x.jpg?v=1630536196",
         description: "This is product 1",
         productCategory: "Clothes",
         price: 100,

@@ -11,6 +11,8 @@ import {
 import Product from "../assets/data/product.ts";
 import vendorData from '../assets/data/vendorData.ts';
 
+import '../components/css/product.css'
+
 
 import { faStar } from "@fortawesome/free-solid-svg-icons/faStar";
 
@@ -50,10 +52,9 @@ function product() {
   return (
     <>
       <div className="flex bg-[#fcf5f4]">
-        <div className="flex justify-self-start border-2 border-b-gray-800 rounded-md w-[40em] h-[30em] m-10">
-          <div className="flex justify-center items-center ">
-            <img src={product?.image} alt="" className="w-full h-full" />
-          </div>
+        <div className="flex border-2 border-b-gray-800 rounded-md w-[40em] h-[30em] m-10 bg-cover bg-no-repeat bg-center"
+          style={{ backgroundImage: `url(${product?.image})` }}
+        >
         </div>
         <div className="flex flex-col relative top-10">
           <div className='flex flex-row justify-between items-end pr-6'>
@@ -134,7 +135,7 @@ function product() {
             <div className="w-96 sm:w-80">
               <button
                 type="submit"
-                className="bg-[#95c3ac] w-96 sm:w-80 rounded-2xl p-5 border border-black flex justify-center"
+                className="BuyBtn bg-[#95c3ac] w-96 sm:w-80 rounded-2xl p-5 border border-black flex justify-center"
               >
                 <span className="text-black text-3xl text-center">
                   Purchase

@@ -1,6 +1,7 @@
 import { useRef , useState } from "react";
 import vendorData from "../assets/data/vendorData";
 import { Link } from "react-router-dom";
+import { Fade } from "react-awesome-reveal";
 
 interface BannerProps {
   userID: number;
@@ -53,20 +54,22 @@ const Banner = ({ userID }: BannerProps) => {
   return (
     <>
       {modalVisible && (
-        <div className="modal fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black bg-opacity-70 z-20">
-          <div className="bg-white p-20 flex flex-col gap-5 items-center">
-            <h1 className='text-2xl font-bold'>Text color</h1>
-            <input
-                ref={inputRef2}
-                type="color"
-                value={color}
-                onChange={(e) => setColor(e.target.value)}
-                className=" w-16 h-9"
-            />
-            <input ref={inputRef} type="text" className="w-80 h-9 border-2 border-black rounded-2xl" placeholder="Enter gradient code" />
-            <button className='bg-[#94C3AD] p-2 pl-4 pr-4 rounded-2xl' onClick={handleCloseModal}>Close</button>
+        <Fade duration={400}>
+          <div className="modal fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black bg-opacity-70 z-20">
+            <div className="bg-white p-20 flex flex-col gap-5 items-center">
+              <h1 className='text-2xl font-bold'>Text color</h1>
+              <input
+                  ref={inputRef2}
+                  type="color"
+                  value={color}
+                  onChange={(e) => setColor(e.target.value)}
+                  className=" w-16 h-9"
+              />
+              <input ref={inputRef} type="text" className="p-2 w-80 h-9 border-2 border-black rounded-2xl" placeholder="Enter gradient code" />
+              <button className='bg-[#94C3AD] p-2 pl-4 pr-4 rounded-2xl' onClick={handleCloseModal}>Close</button>
+            </div>
           </div>
-        </div>
+        </Fade>
       )}
       <div
         className="banner bg-no-repeat bg-cover flex items-center pt-[5%] pb-[5%] border-b-2 border-black"

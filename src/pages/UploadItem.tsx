@@ -1,6 +1,7 @@
 import categoryData from '../assets/data/category';
 import React, { useRef , useState } from 'react';
 import products , { addProduct } from '../assets/data/product';
+import { Fade } from "react-awesome-reveal";
 
 function UploadItem() {
 
@@ -16,6 +17,7 @@ function UploadItem() {
   const handleCloseModal = (newImageUrl: string) => {
     setImageUrl(newImageUrl);
     setModalVisible(false);
+    
   };
 
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -70,25 +72,29 @@ function UploadItem() {
     <>
       {/* Image insert */}
       {modalVisible && (
-        <div className="modal fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black bg-opacity-70 z-20">
-          <div className="bg-white p-20 flex flex-col gap-5 items-center">
-            <h1 className='text-2xl font-bold'>Image link</h1>
-            <input className='border border-black p-2 rounded-2xl' type="text" value={imageUrl} onChange={handleImageChange} />
-            <button className='bg-[#94C3AD] p-2 pl-4 pr-4 rounded-2xl' onClick={() => handleCloseModal(imageUrl)}>Close</button>
+        <Fade duration={400}>
+          <div className="modal fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black bg-opacity-70 z-20">
+            <div className="bg-white p-20 flex flex-col gap-5 items-center">
+              <h1 className='text-2xl font-bold'>Image link</h1>
+              <input className='border border-black p-2 rounded-2xl' type="text" value={imageUrl} onChange={handleImageChange} />
+              <button className='bg-[#94C3AD] p-2 pl-4 pr-4 rounded-2xl' onClick={() => handleCloseModal(imageUrl)}>Close</button>
+            </div>
           </div>
-        </div>
+        </Fade>
       )}
       {/* Complete Modal */}
       {modalVisible2 && (
-        <div className="modal fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black bg-opacity-70 z-20">
-          <div className="bg-white p-20 flex flex-col items-center gap-5 opacity-1">
-            <div className='w-64'>
-              <img className='w-full h-full' src='/assets/icon_complete.png'/>
+        <Fade duration={400}>
+          <div className="modal fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black bg-opacity-70 z-20">
+            <div className="bg-white p-20 flex flex-col items-center gap-5 opacity-1">
+              <div className='w-64'>
+                <img className='w-full h-full' src='/assets/icon_complete.png'/>
+              </div>
+              <h1 className='text-2xl font-bold'>Upload Complete!</h1>
+              <button className='bg-[#94C3AD] p-2 pl-4 pr-4 rounded-2xl' onClick={() => handleCloseModal2()}>Close</button>
             </div>
-            <h1 className='text-2xl font-bold'>Upload Complete!</h1>
-            <button className='bg-[#94C3AD] p-2 pl-4 pr-4 rounded-2xl' onClick={() => handleCloseModal2()}>Close</button>
           </div>
-        </div>
+        </Fade>
       )}
       <div className="flex flex-row gap-8">
       <div className=" h-[35rem] w-[30rem] ml-[3%] mt-[2%] border-white border-8 rounded-2xl basis-1/4">

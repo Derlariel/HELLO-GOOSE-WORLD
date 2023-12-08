@@ -1,0 +1,7 @@
+.Btn {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.Btn:hover {
+    opacity: 0.85;
+}
