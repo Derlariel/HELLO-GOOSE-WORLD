@@ -5,6 +5,7 @@ export interface Product {
     image: string;
     description: string;
     productCategory: string;
+    price: number;
     sales: number;
 }
 
@@ -16,6 +17,7 @@ const products: Product[] = [
         image: "/assets/product-img/product.png",
         description: "This is product 1",
         productCategory: "Clothes",
+        price: 100,
         sales: 10,
     },
     {
@@ -25,6 +27,7 @@ const products: Product[] = [
         image: "/assets/product-img/product.png",
         description: "This is product 2",
         productCategory: "Sports",
+        price: 50,
         sales: 5,
     },
     {
@@ -34,6 +37,7 @@ const products: Product[] = [
         image: "/assets/product-img/product.png",
         description: "This is product 3",
         productCategory: "Shoes",
+        price: 80,
         sales: 8,
     },
     {
@@ -43,6 +47,7 @@ const products: Product[] = [
         image: "/assets/product-img/product.png",
         description: "This is product 4",
         productCategory: "Clothes",
+        price: 150,
         sales: 15,
     },
     {
@@ -52,6 +57,7 @@ const products: Product[] = [
         image: "/assets/product-img/product.png",
         description: "This is product 5",
         productCategory: "Clothes",
+        price: 200,
         sales: 20,
     },
     {
@@ -61,6 +67,7 @@ const products: Product[] = [
         image: "/assets/product-img/product.png",
         description: "This is product 6",
         productCategory: "Clothes",
+        price: 250,
         sales: 25,
     },
     {
@@ -70,6 +77,7 @@ const products: Product[] = [
         image: "/assets/product-img/product.png",
         description: "This is product 7",
         productCategory: "Clothes",
+        price: 300,
         sales: 30,
     },
     {
@@ -79,6 +87,7 @@ const products: Product[] = [
         image: "/assets/product-img/product.png",
         description: "This is product 8",
         productCategory: "Clothes",
+        price: 350,
         sales: 35,
     },
     {
@@ -88,8 +97,13 @@ const products: Product[] = [
         image: "/assets/product-img/product.png",
         description: "This is product 9",
         productCategory: "Clothes",
+        price: 400,
         sales: 40,
     },
 ];
 
 export default products;
+
+export function addProduct(product: Product) {
+    products.push(product);
+}
