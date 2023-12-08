@@ -25,7 +25,9 @@ const Nav = () => {
           </div>
           <div className="flex flex-row gap-5 justify-center items-center">
             <div className="btn flex flex-row justify-center items-center rounded-full w-9">
-              <i className="bi bi-cart2" style={{ fontSize: "1.5em" }}></i>
+              <Link to={{ pathname: "/uploadItem"}}>
+                <i className="bi bi-cart2" style={{ fontSize: "1.5em" }}></i>
+              </Link>
             </div>
             <div className="btn flex flex-row justify-center items-center rounded-full w-9">
               <i className="bi bi-heart" style={{ fontSize: "1.5em" }}></i>

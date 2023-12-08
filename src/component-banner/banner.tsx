@@ -1,11 +1,15 @@
 import { useRef , useState } from "react";
 import vendorData from "../assets/data/vendorData";
+import { Link } from "react-router-dom";
 
 interface BannerProps {
   userID: number;
 }
 
+let a = false;
+
 const Banner = ({ userID }: BannerProps) => {
+
   const [gradientStyle, setGradientStyle] = useState({color: '#fff'});
 
   const selectedVendor = vendorData.find((vendor) => vendor.userId === userID);
@@ -22,13 +26,26 @@ const Banner = ({ userID }: BannerProps) => {
 
   const handleCloseModal = () => {
     const newStyle = inputRef.current?.value ? {
-      color: color,
-      background: inputRef.current?.value + " text",
+      color: 'transparent',
+      background: inputRef.current?.value,
+      backgroundClip: 'text',
+      WebkitBackgroundClip: 'text',
       WebkitTextFillColor: 'transparent',
     } : {
       color: color,
-      background: '',
+      backgroundClip: 'text',
+      WebkitBackgroundClip: 'text',
+      background: 'none',
     };
+
+    console.log(a)
+    if (a == true) {
+      
+      newStyle.background = newStyle.background + " text"
+    }
+    if (inputRef.current?.value) {
+      a = true;
+    }
     setGradientStyle(newStyle);
     setModalVisible(false);
   };
@@ -69,9 +86,11 @@ const Banner = ({ userID }: BannerProps) => {
               "{selectedVendor?.quote}"
             </h2>
             <div className="flex gap-4 mt-4">
-              <button className="bg-[#94C3AD] text-black font-semibold py-2 px-4 rounded border border-black">
-                Chat Now
-              </button>
+              <Link to={{ pathname: "/chat"}}>
+                <button className="bg-[#94C3AD] text-black font-semibold py-2 px-4 rounded border border-black">
+                  Chat Now
+                </button>
+              </Link>
               <button className="bg-[#DD9973] text-black font-semibold py-2 px-4 rounded border border-black">
                 Follow
               </button>
