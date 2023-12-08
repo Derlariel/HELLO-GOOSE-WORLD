@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+import { useLocation } from 'react-router-dom';
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,8 +9,14 @@ import {
   faAtom,
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
+import Product from "../assets/data/product.ts";
+
+
 import { faStar } from "@fortawesome/free-solid-svg-icons/faStar";
+
 function product() {
+  const productId = useLocation().state?.productId;
+  const product = Product.find((product) => product.id === productId);
   const [buttonHeart, setButtonHeartColor] = useState("text-gray-500");
   const [buttonPosition, setButtonPosition] = useState("justify-start");
   const [buttonColor, setButtonColor] = useState("bg-[#d9d9d9]");
@@ -42,17 +49,14 @@ function product() {
       <div className="flex bg-[#fcf5f4]">
         <div className="flex justify-self-start border-2 border-b-gray-800 rounded-md w-[40em] h-[30em] m-10">
           <div className="flex justify-center items-center ">
-            <img src="../../public/assets/icon_phone.png" alt="" className="" />
+            <img src={product?.image} alt="" className="" />
           </div>
         </div>
         <div className="flex flex-col relative top-10">
-          <h1 className="text-5xl">NAME</h1>
+          <h1 className="text-5xl">{product?.name}</h1>
           <div className="flex flex-wrap">
-            <span className="  text-gray-400 w-full">
-              <h1 className=" whitespace-wraop">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Asperiores, voluptatem! ipsum dolor sit amet.
-              </h1>
+            <span className="  text-gray-400 w-[95%]">
+              <h1 className=" whitespace-wraop">{product?.description}</h1>
             </span>
             <div className="flex ">
               <br />
@@ -82,7 +86,7 @@ function product() {
                 </div>
               </div>
               {/** button right! **/}
-              <div className="ml-24">
+              <div className="2xl:ml-25 xl:ml-24 lg:ml-0 lg:mr-5">
                 <h1 className="text-2xl text-[#dd9973] font-bold">
                   self-pick-up
                 </h1>

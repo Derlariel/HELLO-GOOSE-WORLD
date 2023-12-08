@@ -34,6 +34,7 @@ function VendorProfile({ userID }: VendorProfileProps) {
 
   const popular_product = topProducts.map((product) => (
     <Items
+      id={product.id}
       content={product.image}
       name={product.name}
       description={product.description}

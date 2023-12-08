@@ -15,6 +15,7 @@ function CategoryItems({ name , amount , ownerID }: CategoryItemsProps) {
         .slice(0, amount)
         .map((product) => (
             <Items
+                id={product.id}
                 content={product.image}
                 name={product.name}
                 description={product.description}
@@ -25,6 +26,7 @@ function CategoryItems({ name , amount , ownerID }: CategoryItemsProps) {
         .slice(0, amount)
         .map((product) => (
             <Items
+                id={product.id}
                 content={product.image}
                 name={product.name}
                 description={product.description}

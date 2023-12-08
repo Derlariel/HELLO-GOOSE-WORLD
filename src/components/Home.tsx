@@ -10,6 +10,7 @@ import { useState } from "react";
 function Home() {
   const spotList = spotLight_Product.map((Product) => (
     <Items
+      id={Product.id}
       content={Product.image}
       name={Product.name}
       description={Product.description}

@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 interface ItemProps {
+  id: number;
   content: string;
   name: string;
   description: string;
 }
 
-const items = ({ content, name, description }: ItemProps) => {
+const items = ({ id, content, name, description }: ItemProps) => {
   return (
     <>
       {/* items-zone */}
@@ -28,7 +29,11 @@ const items = ({ content, name, description }: ItemProps) => {
             className="bg-[#95c3ac] rounded-2xl pl-4 pr-4 pb-2 pt-2 border border-black flex justify-center"
           >
             <span className="text-black text-[12px] text-center">
-              <Link to="/src/product-conponent/Product.tsx">Purchase</Link>
+              <Link to={{
+                pathname: "/product",
+              }} state={{ productId: id }}>
+                Purchase
+              </Link>
             </span>
           </button>
         </div>
