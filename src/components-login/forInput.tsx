@@ -1,10 +1,19 @@
+import React from "react";
 
-const ForInput = () => {
-  return (
-    <> 
-     <input className="bg-zinc-300  rounded-2xl h-14 w-96 " type="text" />
-    </>
-  )
+interface ForInputProps {
+  placeholder?: string;
 }
 
-export default ForInput
+const ForInput: React.FC<ForInputProps> = ({ placeholder }) => {
+  return (
+    <>
+      <input
+        className="bg-zinc-300  rounded-2xl h-14 w-96 text-center"
+        type="text"
+        placeholder={placeholder}
+      />
+    </>
+  );
+};
+
+export default ForInput;
