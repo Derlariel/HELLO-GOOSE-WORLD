@@ -1,0 +1,12 @@
+#footer {
+    background-color: #94C3AD;
+}
+
+#footer div:first-child {
+    background-color: #FCF5F4;
+}
+
+
+iframe {
+    filter: invert(90%);
+}

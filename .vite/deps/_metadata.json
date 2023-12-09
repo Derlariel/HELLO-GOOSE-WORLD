@@ -1,0 +1,71 @@
+{
+  "hash": "96dff33c",
+  "browserHash": "f2d21305",
+  "optimized": {
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "b1f16910",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "393cc721",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "63820043",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "a6880fda",
+      "needsInterop": false
+    },
+    "@fortawesome/free-solid-svg-icons": {
+      "src": "../../node_modules/@fortawesome/free-solid-svg-icons/index.mjs",
+      "file": "@fortawesome_free-solid-svg-icons.js",
+      "fileHash": "1618394e",
+      "needsInterop": false
+    },
+    "@fortawesome/free-solid-svg-icons/faArrowLeft": {
+      "src": "../../node_modules/@fortawesome/free-solid-svg-icons/faArrowLeft.js",
+      "file": "@fortawesome_free-solid-svg-icons_faArrowLeft.js",
+      "fileHash": "08b625e3",
+      "needsInterop": true
+    },
+    "@fortawesome/free-solid-svg-icons/faCamera": {
+      "src": "../../node_modules/@fortawesome/free-solid-svg-icons/faCamera.js",
+      "file": "@fortawesome_free-solid-svg-icons_faCamera.js",
+      "fileHash": "06f3c8de",
+      "needsInterop": true
+    },
+    "@fortawesome/react-fontawesome": {
+      "src": "../../node_modules/@fortawesome/react-fontawesome/index.es.js",
+      "file": "@fortawesome_react-fontawesome.js",
+      "fileHash": "59fb9648",
+      "needsInterop": false
+    },
+    "@fortawesome/free-solid-svg-icons/faStar": {
+      "src": "../../node_modules/@fortawesome/free-solid-svg-icons/faStar.js",
+      "file": "@fortawesome_free-solid-svg-icons_faStar.js",
+      "fileHash": "baa4f816",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-4ASWBRZ3": {
+      "file": "chunk-4ASWBRZ3.js"
+    },
+    "chunk-O6O4HUXW": {
+      "file": "chunk-O6O4HUXW.js"
+    },
+    "chunk-LQ2VYIYD": {
+      "file": "chunk-LQ2VYIYD.js"
+    }
+  }
+}

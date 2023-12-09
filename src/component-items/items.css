@@ -1,0 +1,15 @@
+.itemDiv span {
+    transition: transform 0.3s ease-in-out;
+}
+
+.itemDiv:hover span {
+    transform: scale(0.98);
+}
+
+.itemDiv button {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.itemDiv button:hover {
+    opacity: 0.85;
+}

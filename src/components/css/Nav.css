@@ -1,16 +1,11 @@
 #nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#logo img {
-  width: 100%;
-  height: auto;
+    background-color: #DD9973;
 }
 
 #search {
-  border-radius: 10px;
-  padding-left: 8px;
-  padding-right: 8px;
+    background-color: #FCF5F4;
+}
+
+.btn {
+    background-color: #FCF5F4;
 }

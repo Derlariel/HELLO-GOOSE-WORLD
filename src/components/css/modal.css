@@ -1,0 +1,14 @@
+.modal {
+    visibility: hidden;
+    transition: visibility 0s 0.5s, opacity 0.5s ease;
+}
+
+.modal-open {
+    visibility: visible;
+    opacity: 1;
+}
+  
+.modal-close {
+    visibility: hidden;
+    opacity: 0;
+}

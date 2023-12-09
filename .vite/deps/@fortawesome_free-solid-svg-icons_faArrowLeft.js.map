@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../node_modules/@fortawesome/free-solid-svg-icons/faArrowLeft.js"],
+  "sourcesContent": ["'use strict';\nObject.defineProperty(exports, '__esModule', { value: true });\nvar prefix = 'fas';\nvar iconName = 'arrow-left';\nvar width = 448;\nvar height = 512;\nvar aliases = [8592];\nvar unicode = 'f060';\nvar svgPathData = 'M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z';\n\nexports.definition = {\n  prefix: prefix,\n  iconName: iconName,\n  icon: [\n    width,\n    height,\n    aliases,\n    unicode,\n    svgPathData\n  ]};\n\nexports.faArrowLeft = exports.definition;\nexports.prefix = prefix;\nexports.iconName = iconName;\nexports.width = width;\nexports.height = height;\nexports.ligatures = aliases;\nexports.unicode = unicode;\nexports.svgPathData = svgPathData;\nexports.aliases = aliases;"],
+  "mappings": ";;;;;AAAA;AAAA;AACA,WAAO,eAAe,SAAS,cAAc,EAAE,OAAO,KAAK,CAAC;AAC5D,QAAI,SAAS;AACb,QAAI,WAAW;AACf,QAAI,QAAQ;AACZ,QAAI,SAAS;AACb,QAAI,UAAU,CAAC,IAAI;AACnB,QAAI,UAAU;AACd,QAAI,cAAc;AAElB,YAAQ,aAAa;AAAA,MACnB;AAAA,MACA;AAAA,MACA,MAAM;AAAA,QACJ;AAAA,QACA;AAAA,QACA;AAAA,QACA;AAAA,QACA;AAAA,MACF;AAAA,IAAC;AAEH,YAAQ,cAAc,QAAQ;AAC9B,YAAQ,SAAS;AACjB,YAAQ,WAAW;AACnB,YAAQ,QAAQ;AAChB,YAAQ,SAAS;AACjB,YAAQ,YAAY;AACpB,YAAQ,UAAU;AAClB,YAAQ,cAAc;AACtB,YAAQ,UAAU;AAAA;AAAA;",
+  "names": []
+}
