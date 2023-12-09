@@ -27,7 +27,7 @@ const vendorData: vendorDataInterface[] = [
       "https://w0.peakpx.com/wallpaper/642/440/HD-wallpaper-anime-the-eminence-in-shadow.jpg",
     profileImage: "/assets/product-img/Shadow-lord.JPG",
     smallBanner:
-      "https://png.pngtree.com/background/20211215/original/pngtree-sakura-trees-flowers-pink-beautiful-banner-picture-image_1499423.jpg",
+      "https://www.xeen.co/wp-content/uploads/2023/02/%E0%B8%AD%E0%B8%99%E0%B8%B4%E0%B9%80%E0%B8%A1%E0%B8%B01-1024x523.jpg",
   },
   {
     userId: 3,
@@ -37,7 +37,7 @@ const vendorData: vendorDataInterface[] = [
       "https://www.xeen.co/wp-content/uploads/2023/02/%E0%B8%AD%E0%B8%99%E0%B8%B4%E0%B9%80%E0%B8%A1%E0%B8%B01-1024x523.jpg",
     profileImage: "/assets/product-img/rayong.jpg",
     smallBanner:
-      "https://png.pngtree.com/background/20211215/original/pngtree-sakura-trees-flowers-pink-beautiful-banner-picture-image_1499423.jpg",
+      "https://m.media-amazon.com/images/M/MV5BMDdmZjYxMTgtYzk4MC00OWMxLWE3OWItOWY0NTA0OWIyNDZiXkEyXkFqcGdeQXVyOTc4OTAwMjU@._V1_.jpg",
   },
   {
     userId: 4,
