@@ -16,15 +16,15 @@ const RegsiterPage = () => {
         <div className="w-2/4 flex flex-col  gap-6 ">
             <div className="flex flex-col gap-2">
             <div><p>USERNAME :</p></div>
-            <div><ForInput /></div>
+            <div><ForInput placeholder='Please Enter Your Username' /></div>
             </div>
             <div className="flex flex-col gap-2">
             <div><p>Student ID :</p></div>
-            <div><ForInput /> </div>
+            <div><ForInput placeholder='Please Enter Your StudentID'/> </div>
             </div>
             <div className="flex flex-col gap-2">
             <div><p>Email :</p></div>
-            <div><ForInput /> </div>
+            <div><ForInput placeholder='Please Enter Your Email'/> </div>
             </div>
           </div>
 
@@ -36,15 +36,15 @@ const RegsiterPage = () => {
           <div className="w-2/4 flex flex-col items-center  gap-6    ">
           <div className= "flex flex-col gap-2">
           <div><p>Name :</p></div>
-            <div><ForInput /></div>
+            <div><ForInput placeholder='Please Enter Your Name'/></div>
           </div>
             <div className="flex flex-col gap-2">
             <div><p>Phone Number :</p></div>
-            <div><ForInput /> </div>
+            <div><ForInput placeholder='Please Enter Your Phone Number'/> </div>
             </div>
             <div>
             <div className="flex flex-col gap-2"><p>Password :</p></div>
-            <div><ForInput /> </div>
+            <div><ForInput placeholder='Please Enter Your Password'/> </div>
             </div>
           </div>
           </div>

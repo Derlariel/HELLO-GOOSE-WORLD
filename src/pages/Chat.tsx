@@ -46,7 +46,7 @@ const Chat = () => {
         <div className="m-10">
           <div className="flex gap-5">
             <img
-              src="../../public/assets/icon1.PNG"
+              src="/assets/icon1.PNG"
               alt="chat-logo"
               className=" w-16 h-16 border border-black rounded-full"
             />
@@ -55,7 +55,7 @@ const Chat = () => {
           <div>
             <div className="flex justify-end gap-5">
               <img
-                src="../../public/assets/icon1.PNG"
+                src="/assets/icon1.PNG"
                 alt="chat-logo"
                 className=" w-16 h-16 border border-black rounded-full translate-x-[34em]"
               />
@@ -89,7 +89,9 @@ const Chat = () => {
         </div>
 
         <div className="w-3/4 bg-[#d9d9d9] rounded-lg">
-          <h1 className="opacity-50 p-3">Type a Message Here.</h1>
+          <h1 className="opacity-50 p-3 text-center text-2xl">
+            Type a Message Here.
+          </h1>
         </div>
         <div>
           <FontAwesomeIcon
