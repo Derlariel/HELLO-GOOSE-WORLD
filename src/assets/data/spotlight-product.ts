@@ -9,24 +9,24 @@ export interface SpotlightProduct {
 const spotlightProducts: SpotlightProduct[] = [
   {
     id: 1,
-    userId: 1,
-    name: "Product 1",
-    image: "/assets/product-img/product.png",
-    description: "This is product 1",
+    userId: 5,
+    name: "Wave",
+    image: "/assets/product-img/wave.jpg",
+    description: "Wave Love Emma Myers !!",
   },
   {
     id: 2,
     userId: 2,
-    name: "Product 2",
-    image: "/assets/product-img/product.png",
-    description: "This is product 2",
+    name: "Hua Pee",
+    image: "/assets/product-img/Shadow-lord.JPG",
+    description: "My Anime !! ",
   },
   {
-    id: 3,
+    id: 2,
     userId: 3,
-    name: "Product 3",
-    image: "/assets/product-img/product.png",
-    description: "This is product 3",
+    name: "Rayong",
+    image: "/assets/product-img/rayong.jpg",
+    description: "I love Rayong !! ",
   },
 ];
 
