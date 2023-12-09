@@ -19,7 +19,7 @@ const Chat = () => {
           />
           <div className=" rounded-full bg-gray-400 mr-2 ml-2">
             <img
-              src="../../public/assets/icon2.PNG"
+              src="/assets/icon2.PNG"
               alt="logo-chat"
               className="w-16"
             />
